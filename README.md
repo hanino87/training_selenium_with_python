@@ -89,7 +89,7 @@ def driver():
     driver.quit()
     
 
-## test to 
+## test to that username field works on webpage 
 
 def test_that_login_username_filed_works(driver):
     
