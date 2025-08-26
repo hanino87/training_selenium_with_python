@@ -160,3 +160,7 @@ In your Selenium script, you can target this field using:
 driver.find_element(By.ID, "username")
 
 ```
+
+## 📋 Page for traing testautomation GUI testing 
+
+https://practicetestautomation.com/practice/
