@@ -93,7 +93,7 @@ def driver():
 
 def test_that_login_username_filed_works(driver):
     
-    # go to webbpage 
+    # go to webpage 
     driver.get("https://practicetestautomation.com/practice-test-login/")
     
     time.sleep(2) # wait two second until next step 
@@ -161,6 +161,6 @@ driver.find_element(By.ID, "username")
 
 ```
 
-## 📋 Page for traing testautomation GUI testing 
+## 💡 Webpage to test on 
 
-https://practicetestautomation.com/practice/
+https://practicetestautomation.com/practice-test-login/
