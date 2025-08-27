@@ -187,3 +187,7 @@ element.send_keys("student") # Fill in text in element filed
 ## 💡 Webpage to test on 
 
 https://practicetestautomation.com/practice-test-login/
+
+## Selenium offical documentation 
+
+https://selenium-python.readthedocs.io
