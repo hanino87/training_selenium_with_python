@@ -24,7 +24,7 @@ Before running the tests, make sure you have the following installed:
    pip install selenium
    ```
 
-2.**Make Sure ChromeDriver is in Your System PATH2**
+2.**Make Sure ChromeDriver is in Your System PATH**
 
    ```shell
    chromedriver --version
@@ -44,15 +44,16 @@ Before running the tests, make sure you have the following installed:
 
    🛠️ Tip: If it’s not working, search online:
    “How to add ChromeDriver to PATH on [your OS]”
-   (e.g. macOS, Windows, Linux)
+   (e.g. macOS, Windows, Linux) or visit seleniums offical site 
+
+   https://selenium-python.readthedocs.io
 
 3.##Running Tests##
 
-Create a Pythonfile name it to test_login.py
+Create a Pythonfile name it to test_login.py and then install pytest 
 
  ```shell
    pip install pytest
-   pytest test_login.py -s
    ```
 
 ## 💡 Simple Codeexample 
@@ -65,7 +66,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 '''Pytest fixture to initialize and cleanup the WebDriver (browser) 
 after each test setup/test teardown '''
@@ -98,13 +98,13 @@ def test_that_login_username_filed_works(driver):
     
     time.sleep(2) # wait two second until next step 
     
-    # search for username by elements ID 
+    # search for username by elements ID and assign it to variable username_input 
     username_input = driver.find_element(By.ID, "username")
     
-    # validate that the element is visible on page 
+    # validate that the element username_input is visible on page 
     assert username_input.is_displayed()
     
-    # validate that element is enabled 
+    # validate that element username_input is enabled 
     assert username_input.is_enabled ()
     
     # type in a usernaname in unsername input field on page
@@ -115,6 +115,15 @@ def test_that_login_username_filed_works(driver):
     '''implement more test below'''
     
 ```
+
+## Run test with pytest 
+
+```py
+
+ pytest test_login.py -s
+
+```
+
     
 ## 💡 Use Inspect on webpage tool to catch elements attribute 
 
@@ -160,6 +169,20 @@ In your Selenium script, you can target this field using:
 driver.find_element(By.ID, "username")
 
 ```
+And then assign it to a variable and start to perform action on it 
+
+```py
+
+element = driver.find_element(By.ID, "username")
+
+elment.click() # click on the element 
+
+element.send_keys("student") # Fill in text in element filed 
+
+
+```
+
+
 
 ## 💡 Webpage to test on 
 
